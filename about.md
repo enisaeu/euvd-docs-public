@@ -6,4 +6,4 @@ In line with Coordinated Vulnerability Disclosure practices, which aim at provid
 
 To avoid efforts duplication and to support complementarity, ENISA closely cooperates with MITRE and European as well as non-European operators of the Common Vulnerabilities and Exposures (CVE) system. In this context, ENISA offers vulnerability registry services after its onboarding as a CVE Numbering Authority (CNA), with a focus on vulnerabilities in IT products discovered by or reported to European CSIRTs for coordinated disclosure.
 
-Following its official launch, ENISA will continue engaging with its stakeholders to further develop and improve the EUVD service catalogue.
+Following its official launch, ENISA will continue engaging with its stakeholders to further develop and improve the EUVD service catalogue..
