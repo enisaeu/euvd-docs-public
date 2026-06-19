@@ -56,33 +56,33 @@ Onboarded as a CVE Numbering Authority (CNA) since January 2024, ENISA initiated
 
 **General feedback**
 
-Q1: Where can I share feedback about the EUVD platform?
+Q1: Where can I share feedback about the EUVD platform?  
 You can submit your feedback directly on the platform.
 
-Q2: What happens after I submit feedback?
+Q2: What happens after I submit feedback?  
 Your input is reviewed internally and considered as part of our ongoing improvements.
 
-Q3: Will I hear back about my feedback?
+Q3: Will I hear back about my feedback?  
 We don't provide individual responses, but key updates will appear on our Q&A page.
 
 **Bugs and technical issues**
 
-Q1: I found a technical issue on the EUVD platform. What should I do?
+Q1: I found a technical issue on the EUVD platform. What should I do?  
 Please report it directly through the platform. We are monitoring all validated issues and track them via our Q&A page: [https://euvd.enisa.europa.eu/faq](https://euvd.enisa.europa.eu/faq)
 
-Q2: Will I be notified when my bug report is resolved?
+Q2: Will I be notified when my bug report is resolved?  
 Resolutions and updates are posted on the Q&A page regularly. We do not send individual follow-ups.
 
-Q3: How quickly are bugs fixed?
+Q3: How quickly are bugs fixed?  
 Response times vary depending on issue severity. Critical bugs are prioritized.
 
 **Feature requests**
 
-Q1: How can I suggest a new feature for EUVD?
+Q1: How can I suggest a new feature for EUVD?  
 Submit your suggestion through the platform's feedback option.
 
-Q2: What happens after I suggest a feature?
+Q2: What happens after I suggest a feature?  
 Your idea is recorded and reviewed. Feasibility and impact are key criteria for implementation.
 
-Q3: Will my feature request be added right away?
+Q3: Will my feature request be added right away?  
 Not necessarily. All suggestions are considered, but implementation depends on strategic priorities.
