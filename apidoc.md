@@ -113,7 +113,7 @@ curl -X GET "https://euvdservices.enisa.europa.eu/api/advisory?id=cisco-sa-ata19
 curl -X GET https://euvdservices.enisa.europa.eu/api/dump/cve-euvd-mapping
 ```
 
-[Download Latest CSV](https://euvdservices.enisa.europa.eu/dump/cve-euvd-mapping)
+[Download Latest CSV](https://euvdservices.enisa.europa.eu/api/dump/cve-euvd-mapping)
 
 ### Download KEV Dump (JSON)
 
@@ -133,4 +133,4 @@ curl -X GET https://euvdservices.enisa.europa.eu/api/dump/cve-euvd-mapping
 curl -X GET https://euvdservices.enisa.europa.eu/api/kev/dump
 ```
 
-[Download Latest JSON](https://euvdservices.enisa.europa.eu/kev/dump)
+[Download Latest JSON](https://euvdservices.enisa.europa.eu/api/kev/dump)
