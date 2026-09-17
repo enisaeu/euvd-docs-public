@@ -127,7 +127,7 @@ curl -X GET https://euvdservices.enisa.europa.eu/api/dump/cve-euvd-mapping
 - `cveId` — CVE identifier (e.g. `CVE-2021-22555`)
 - `euvdId` — EUVD identifier (e.g. `EUVD-2021-9696`)
 - `dateAdded` — Earliest date the CVE was added across all KEV sources (format: YYYY-MM-DD)
-- `sources` — List of KEV sources that include this CVE (e.g. `cisa_kev`, `eu_kev`)
+- `sources` — List of KEV sources that include this CVE (e.g. `cisa_kev`, `eukev_kev`)
 
 ```bash
 curl -X GET https://euvdservices.enisa.europa.eu/api/kev/dump
