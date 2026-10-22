@@ -4,6 +4,8 @@ All endpoints are `GET`, require no authentication, no custom headers, and no re
 
 Base URL: `https://euvdservices.enisa.europa.eu`
 
+Errors are returned as JSON: `{"error": "..."}`. A path that does not exist returns `404`.
+
 ## Frontpage
 
 ### Show latest vulnerabilities
@@ -58,13 +60,18 @@ curl -X GET https://euvdservices.enisa.europa.eu/api/criticalvulnerabilities
 - `toDate` (YYYY-MM-DD, e.g. `toDate=2025-01-14`)
 - `fromUpdatedDate` (YYYY-MM-DD, e.g. `fromUpdatedDate=2023-01-14`)
 - `toUpdatedDate` (YYYY-MM-DD, e.g. `toUpdatedDate=2025-01-14`)
-- `product` (string, e.g. `product=Windows`)
-- `vendor` (string, e.g. `vendor=Microsoft`)
-- `assigner` (string, e.g. `assigner=mitre`)
+- `product` (string, one product name, e.g. `product=Windows`). Every word must appear in the name, and the last word also matches longer words (`product=Win` finds Windows).
+- `vendor` (string, one vendor name, e.g. `vendor=Microsoft`). Matched like `product`. Not a list: `vendor=Siemens,Schneider` looks for a single vendor whose name contains both words.
+- `advisory` (string, an advisory ID, e.g. `advisory=cisco-sa-ata19x-multi-RDTEqRsy`). Matched like `product`.
+- `assigner` (comma-separated list, e.g. `assigner=mitre` or `assigner=mitre,redhat`)
 - `exploited` (true/false, e.g. `exploited=true`)
+- `fromKEVDate` (YYYY-MM-DD, e.g. `fromKEVDate=2024-01-01`). Date added to a Known Exploited Vulnerabilities catalogue.
+- `toKEVDate` (YYYY-MM-DD, e.g. `toKEVDate=2024-12-31`)
 - `text` (keywords, e.g. `text=vulnerability`) — searches across description, EUVD ID, aliases, product name, and vendor name.
 - `page` (integer, starts at 0, e.g. `page=2`)
 - `size` (integer, default 10, e.g. `size=100` — max)
+
+An invalid parameter returns `400`.
 
 ```bash
 curl -X GET "https://euvdservices.enisa.europa.eu/api/search?fromScore=0&toScore=10"
@@ -80,10 +87,12 @@ curl -X GET "https://euvdservices.enisa.europa.eu/api/search?fromScore=0&toScore
 
 **Parameters:**
 
-- `id` (string, e.g. `id=EUVD-2025-4893`)
+- `id` (string, an EUVD ID or a vulnerability ID such as a CVE, e.g. `id=EUVD-2025-4893` or `id=CVE-2024-3400`)
+
+Returns `404` if no EUVD matches the ID.
 
 ```bash
-curl -X GET "https://euvdservices.enisa.europa.eu/api/enisaid?id=EUVD-2024-45012"
+curl -X GET "https://euvdservices.enisa.europa.eu/api/enisaid?id=CVE-2024-3400"
 ```
 
 ### Show advisory by ID
@@ -95,6 +104,8 @@ curl -X GET "https://euvdservices.enisa.europa.eu/api/enisaid?id=EUVD-2024-45012
 **Parameters:**
 
 - `id` (string, e.g. `id=oxas-adv-2024-0002`)
+
+Returns `404` if no advisory matches the ID.
 
 ```bash
 curl -X GET "https://euvdservices.enisa.europa.eu/api/advisory?id=cisco-sa-ata19x-multi-RDTEqRsy"
